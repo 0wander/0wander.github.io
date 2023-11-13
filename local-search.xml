@@ -4,11 +4,50 @@
   
   
   <entry>
+    <title>js script</title>
+    <link href="/2023/11/13/js/"/>
+    <url>/2023/11/13/js/</url>
+    
+    <content type="html"><![CDATA[<p>起因是由于hakgame中的一道题-组委会模拟器<br><img src="/img/postimg/3-1.png" alt="image.png"><br>其中要求在出现flag时需要用鼠标点击撤销,当然不可能让你人工就完成的<br>so我需要写个脚本来完成这件事,这当然需要javascript基础</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-built_in">setInterval</span>(<span class="hljs-function">() =&gt;</span><br>  <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">&quot;.fakeqq-message__bubble&quot;</span>))<br>  .<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element.<span class="hljs-property">innerHTML</span>.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;hack[&quot;</span>) != -<span class="hljs-number">1</span>)<br>  .<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element.<span class="hljs-title function_">click</span>())<br>            , <span class="hljs-number">100</span>)<br></code></pre></td></tr></table></figure><p>分析一下wp脚本<br>setInterval()函数,有两个参数,在给定时间中循环执行函数或者计算,直到clearinterval()调用或者窗口关闭,这里就是每100毫秒执行中间的代码<br>Array.from()将可跌代或类数组的对象变成数组<br>document.querySelectorAll(“.aaa”)函数会返回class&#x3D;aaa的所有对象,这里是由于所有可点击的消息(具有click事件)都在这个类的<div>元素上<br>array.filter()过滤器将满足条件的元素集合起来创建新的数组<br>这里使用了很多箭头函数的格式,箭头函数类似匿名函数可以通过&#x3D;来赋值函数名 a&#x3D; () &#x3D;&gt; {},这样可以通过a()调用函数,箭头函数需要注意他是继承外部函数的this实例,括号中作为参数传入,并执行中括号中的函数体<br>element参数会遍历上面获取的数组执行后面的函数体,innerhtml获取对象的内容也就是标签中间的内容,indexof(“aaa”)看看获取的字符串中是否有aaa有返回第一次出现的下标,没有返回-1<br>最后foreach遍历数组,直接执行click()事件也就是点击事件<br>这里wp写得非常简洁,由于是通过获取,过滤,在执行的方式,所以这个js代码几乎可以得到任何元素在一张网页中<br><img src="/img/postimg/3-2.png" alt="image.png"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementByTagName</span>(<span class="hljs-string">&quot;a&quot;</span>)<br>           .<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">a</span>)=&gt;</span>a.<span class="hljs-property">innerHTML</span>.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;div&quot;</span>))<br>           .<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">a</span>)=&gt;</span><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a.<span class="hljs-property">innerHTML</span>)))<br></code></pre></td></tr></table></figure><p>这里我模仿上面代码获取我校的相关通知,但是也只有这一个页面而已</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>无线传输</title>
+    <link href="/2023/11/13/%E6%97%A0%E7%BA%BF%E4%BC%A0%E8%BE%93/"/>
+    <url>/2023/11/13/%E6%97%A0%E7%BA%BF%E4%BC%A0%E8%BE%93/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/img/postimg/2-0.png" alt="image.png"><br>通过搜索iss和无线传输图片,可以找到一个关于接收国际空间站信号的活动<br><img src="/img/postimg/2-1.png" alt="image.png"><br>其中方式有语音中继,aprs转发,sstv下传,天地通联等等<br>这篇文章介绍的正是sstv”慢扫描电视”的古老技术<br>我们下载附件是一个.wav文件明显是一个音频文件,需要我们解码成图片<br>所以我们直接搜索sstv解码工具能够找到rx-sstv工具,<br><img src="/img/postimg/2-2.png" alt="image.png"><br>最后一步,需要我们将音频导入,但是没有直接导入的方式<br>间接的是一边播放,一边接收,或者下载虚拟声卡,vitrual audio cable来实现<br><img src="/img/postimg/2-3.png" alt="image.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>yaml vs json</title>
+    <link href="/2023/11/13/yaml%20vs%20json/"/>
+    <url>/2023/11/13/yaml%20vs%20json/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/img/postimg/1-1.png" alt="image.png"><br>要求注释已经写的很明显了,所以需要考验我们的搜索能力了<br>如何找到一个字符串可以被json.loads()和yaml.safe_load()同时读取并且得到不同的结果<br>浅浅搜索一下就可以知道,json跟yaml几乎是一个东西的不同表现形式<br>只是yaml的可读性更强,想让他们解析出不同的结果,首先是输入的字符串一定是json格式<br>在我尝试时发现,如果用json格式作为输入基本上字符串都会被加上引号,所以我开始寻找数字,比如科学计数法中json格式会保留,而转为yaml时却会解析为整数格式,{“a”:1e1}会解析为a:10,这样我就拿到了第一个flag<br>json格式的规范是什么呢,由<a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-404/">ecma-404</a>和<a href="https://www.rfc-editor.org/rfc/rfc8259">rfc 8259</a>定义(由wp提供),其中对于相同键值描述与<a href="https://yaml.org/spec/1.2.2/">yaml1.2</a>不太相同,在yaml1.2中键值相同会报错但是yaml1.0中就不会,并且json也不会,so我侥幸拿到了第二个flag,至于为什么我想到了这个,是因为<br><img src="/img/postimg/1-2.png" alt="image.png"><br>其中我看到第四条给的灵感</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2023/11/13/hello-world/"/>
     <url>/2023/11/13/hello-world/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     

@@ -16,19 +16,23 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://example.com/about/index.html">
+    <meta name="description" content="起因是由于hakgame中的一道题-组委会模拟器其中要求在出现flag时需要用鼠标点击撤销,当然不可能让你人工就完成的so我需要写个脚本来完成这件事,这当然需要javascript基础 12345setInterval(() &#x3D;&gt;  Array.from(document.querySelectorAll(&quot;.fakeqq-message__bubble&quot;))  .fil">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js script">
+<meta property="og:url" content="http://example.com/2023/11/13/js/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="起因是由于hakgame中的一道题-组委会模拟器其中要求在出现flag时需要用鼠标点击撤销,当然不可能让你人工就完成的so我需要写个脚本来完成这件事,这当然需要javascript基础 12345setInterval(() &#x3D;&gt;  Array.from(document.querySelectorAll(&quot;.fakeqq-message__bubble&quot;))  .fil">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-13T03:45:36.000Z">
-<meta property="article:modified_time" content="2023-11-13T06:45:08.622Z">
+<meta property="og:image" content="http://example.com/img/postimg/1519e2a4953947b9.jpg">
+<meta property="article:published_time" content="2023-11-13T08:31:21.324Z">
+<meta property="article:modified_time" content="2023-11-13T08:33:59.668Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/postimg/1519e2a4953947b9.jpg">
   
   
   
-  <title>关于 - Hexo</title>
+  <title>js script - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -88,7 +92,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -206,9 +210,49 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于"></span>
+            <span id="subtitle" data-typed-text="js script"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-13 16:31" pubdate>
+          2023年11月13日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -224,61 +268,89 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/1519e2a4953947b9.jpg" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">wander</div>
-    <div class="about-intro">这个人很懒,什么都没留下</div>
-    <div class="about-icons">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=https://github.com/0wander class="
-           hint--bottom hint--rounded"
-           aria-label=GitHub
-           target="_blank"
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">js script</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>起因是由于hakgame中的一道题-组委会模拟器<br><img src="/img/postimg/3-1.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>其中要求在出现flag时需要用鼠标点击撤销,当然不可能让你人工就完成的<br>so我需要写个脚本来完成这件事,这当然需要javascript基础</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-built_in">setInterval</span>(<span class="hljs-function">() =&gt;</span><br>  <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">&quot;.fakeqq-message__bubble&quot;</span>))<br>  .<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element.<span class="hljs-property">innerHTML</span>.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;hack[&quot;</span>) != -<span class="hljs-number">1</span>)<br>  .<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element.<span class="hljs-title function_">click</span>())<br>            , <span class="hljs-number">100</span>)<br></code></pre></td></tr></table></figure>
+<p>分析一下wp脚本<br>setInterval()函数,有两个参数,在给定时间中循环执行函数或者计算,直到clearinterval()调用或者窗口关闭,这里就是每100毫秒执行中间的代码<br>Array.from()将可跌代或类数组的对象变成数组<br>document.querySelectorAll(“.aaa”)函数会返回class&#x3D;aaa的所有对象,这里是由于所有可点击的消息(具有click事件)都在这个类的<div>元素上<br>array.filter()过滤器将满足条件的元素集合起来创建新的数组<br>这里使用了很多箭头函数的格式,箭头函数类似匿名函数可以通过&#x3D;来赋值函数名 a&#x3D; () &#x3D;&gt; {},这样可以通过a()调用函数,箭头函数需要注意他是继承外部函数的this实例,括号中作为参数传入,并执行中括号中的函数体<br>element参数会遍历上面获取的数组执行后面的函数体,innerhtml获取对象的内容也就是标签中间的内容,indexof(“aaa”)看看获取的字符串中是否有aaa有返回第一次出现的下标,没有返回-1<br>最后foreach遍历数组,直接执行click()事件也就是点击事件<br>这里wp写得非常简洁,由于是通过获取,过滤,在执行的方式,所以这个js代码几乎可以得到任何元素在一张网页中<br><img src="/img/postimg/3-2.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementByTagName</span>(<span class="hljs-string">&quot;a&quot;</span>)<br>           .<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">a</span>)=&gt;</span>a.<span class="hljs-property">innerHTML</span>.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;div&quot;</span>))<br>           .<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">a</span>)=&gt;</span><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a.<span class="hljs-property">innerHTML</span>)))<br></code></pre></td></tr></table></figure>
+<p>这里我模仿上面代码获取我校的相关通知,但是也只有这一个页面而已</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/11/13/%E6%97%A0%E7%BA%BF%E4%BC%A0%E8%BE%93/" title="无线传输">
+                        <span class="hidden-mobile">无线传输</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=https://space.bilibili.com/356924218 class="
-           hint--bottom hint--rounded"
-           aria-label=bilibili
-           target="_blank"
-        >
-          <i class="iconfont icon-bilibili" aria-hidden="true"></i>
-          
-        </a>
-      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
     </div>
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    
-  </div>
-
-  
-</article>
-
 
 
 
@@ -305,11 +377,8 @@
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     
 
     
@@ -402,6 +471,46 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
