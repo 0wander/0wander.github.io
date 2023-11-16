@@ -16,23 +16,23 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="起因是由于hakgame中的一道题-组委会模拟器其中要求在出现flag时需要用鼠标点击撤销,当然不可能让你人工就完成的so我需要写个脚本来完成这件事,这当然需要javascript基础 12345setInterval(() &#x3D;&gt;  Array.from(document.querySelectorAll(&quot;.fakeqq-message__bubble&quot;))  .fil">
+    <meta name="description" content="将提供的压缩包解压出来,得到两个exe文件进程执行.exe 和 another.exe常规拖入ida中看看情况这是进程执行那个文件的反编译情况,有几个看点,qmemcpy函数 和Createprocessw函数,一个明显跟key有关,你一个创建了一个新的进程,qmemcpy将那一长串字符串存入source中,然后通过一个for循环操作,python中得到的脚本 1234flag&#x3D;&#x27;]]&#x2F;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js script">
-<meta property="og:url" content="http://example.com/2023/11/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%84%9A%E6%9C%AC/index.html">
+<meta property="og:title" content="ezprocess">
+<meta property="og:url" content="http://example.com/2023/11/16/ezprocess/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="起因是由于hakgame中的一道题-组委会模拟器其中要求在出现flag时需要用鼠标点击撤销,当然不可能让你人工就完成的so我需要写个脚本来完成这件事,这当然需要javascript基础 12345setInterval(() &#x3D;&gt;  Array.from(document.querySelectorAll(&quot;.fakeqq-message__bubble&quot;))  .fil">
+<meta property="og:description" content="将提供的压缩包解压出来,得到两个exe文件进程执行.exe 和 another.exe常规拖入ida中看看情况这是进程执行那个文件的反编译情况,有几个看点,qmemcpy函数 和Createprocessw函数,一个明显跟key有关,你一个创建了一个新的进程,qmemcpy将那一长串字符串存入source中,然后通过一个for循环操作,python中得到的脚本 1234flag&#x3D;&#x27;]]&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/icon.jpg">
-<meta property="article:published_time" content="2023-11-13T08:31:21.324Z">
-<meta property="article:modified_time" content="2023-11-13T09:17:32.661Z">
+<meta property="article:published_time" content="2023-11-16T06:51:07.478Z">
+<meta property="article:modified_time" content="2023-11-16T06:53:46.359Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/icon.jpg">
   
   
   
-  <title>js script - Hexo</title>
+  <title>ezprocess - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +210,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="js script"></span>
+            <span id="subtitle" data-typed-text="ezprocess"></span>
           
         </div>
 
@@ -221,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-13 16:31" pubdate>
-          2023年11月13日 下午
+        <time datetime="2023-11-16 14:51" pubdate>
+          2023年11月16日 下午
         </time>
       </span>
     
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          2k 字
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          9 分钟
+          17 分钟
         
       </span>
     
@@ -281,16 +281,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">js script</h1>
+            <h1 id="seo-header">ezprocess</h1>
             
             
               <div class="markdown-body">
                 
-                <p>起因是由于hakgame中的一道题-组委会模拟器<br><img src="/img/postimg/1/3-1.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>其中要求在出现flag时需要用鼠标点击撤销,当然不可能让你人工就完成的<br>so我需要写个脚本来完成这件事,这当然需要javascript基础</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-built_in">setInterval</span>(<span class="hljs-function">() =&gt;</span><br>  <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">&quot;.fakeqq-message__bubble&quot;</span>))<br>  .<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element.<span class="hljs-property">innerHTML</span>.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;hack[&quot;</span>) != -<span class="hljs-number">1</span>)<br>  .<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element.<span class="hljs-title function_">click</span>())<br>            , <span class="hljs-number">100</span>)<br></code></pre></td></tr></table></figure>
-<p>分析一下wp脚本<br>setInterval()函数,有两个参数,在给定时间中循环执行函数或者计算,直到clearinterval()调用或者窗口关闭,这里就是每100毫秒执行中间的代码<br>Array.from()将可跌代或类数组的对象变成数组<br>document.querySelectorAll(“.aaa”)函数会返回class&#x3D;aaa的所有对象,这里是由于所有可点击的消息(具有click事件)都在这个类的<div>元素上<br>array.filter()过滤器将满足条件的元素集合起来创建新的数组<br>这里使用了很多箭头函数的格式,箭头函数类似匿名函数可以通过&#x3D;来赋值函数名 a&#x3D; () &#x3D;&gt; {},这样可以通过a()调用函数,箭头函数需要注意他是继承外部函数的this实例,括号中作为参数传入,并执行中括号中的函数体<br>element参数会遍历上面获取的数组执行后面的函数体,innerhtml获取对象的内容也就是标签中间的内容,indexof(“aaa”)看看获取的字符串中是否有aaa有返回第一次出现的下标,没有返回-1<br>最后foreach遍历数组,直接执行click()事件也就是点击事件<br>这里wp写得非常简洁,由于是通过获取,过滤,在执行的方式,所以这个js代码几乎可以得到任何元素在一张网页中<br><img src="/img/postimg/1/3-2.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementByTagName</span>(<span class="hljs-string">&quot;a&quot;</span>)<br>           .<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">a</span>)=&gt;</span>a.<span class="hljs-property">innerHTML</span>.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;div&quot;</span>))<br>           .<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">a</span>)=&gt;</span><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a.<span class="hljs-property">innerHTML</span>)))<br></code></pre></td></tr></table></figure>
-<p>这里我模仿上面代码获取我校的相关通知,但是也只有这一个页面而已</p>
+                <p>将提供的压缩包解压出来,得到两个exe文件<br>进程执行.exe 和 another.exe<br>常规拖入ida中看看情况<br><img src="/img/postimg/2/1-1.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这是进程执行那个文件的反编译情况,有几个看点,qmemcpy函数 和Createprocessw函数,一个明显跟key有关,你一个创建了一个新的进程,<br>qmemcpy将那一长串字符串存入source中,然后通过一个for循环操作,python中得到的脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">flag=<span class="hljs-string">&#x27;]]//]]Efcvh]]bopuifs/fyf!EBTDUG|Z1v(w4`cf4o`us2dl4e&quot;~&#x27;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(flag)):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(flag[i])-<span class="hljs-number">1</span>),end=<span class="hljs-string">&quot;&quot;</span>)<br><br></code></pre></td></tr></table></figure>
+<p>得到\..\Debug\another.exe DASCTF{Y0u’v3_be3n_tr1ck3d!},剩下的代码不用看了,调用了another.exe 并且传入了DASCTF{Y0u’v3_be3n_tr1ck3d!}(不是flag)作为参数,接下来看看another<br><img src="/img/postimg/2/1-2.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>得到反编译结果后,很快发现有right和wrong,说明判断函数就在这里,仔细看看会发现有个crflag[ii]&#x3D;&#x3D;enflag[ii]的if语句,再从前面发现了crflag[m]&#x3D;flag[xb[m]],和key[j]&#x3D;argv[1][j],<br>有几个关键字符串key,enflag-&gt;crflag,xb[]-&gt;flag<br>key前面已经得到了key&#x3D;”DASCTF{Y0u’v3_be3n_tr1ck3d!}”<br>enflag&#x3D;”77h, 0, 72h, 17h, 0Bh, 34h, 13h, 69h, 6Fh, 21h, 54h, 45h, 6Ch, 3Eh, 3Dh, 16h, 5Ah, 3Dh, 30h, 0Dh, 11h, 61h, 30h, 4Ah, 70h, 1Fh, 52h, 39h, 2, 4, 2Eh, 10h”<br>由此我们可以得到crflag</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">key=<span class="hljs-string">&quot;DASCTF&#123;Y0u&#x27;v3_be3n_tr1ck3d!&#125;&quot;</span><br>enflag=[<span class="hljs-number">0x77</span>, <span class="hljs-number">0x0</span>, <span class="hljs-number">0x72</span>, <span class="hljs-number">0x17</span>, <span class="hljs-number">0x0B</span>, <span class="hljs-number">0x34</span>, <span class="hljs-number">0x13</span>, <span class="hljs-number">0x69</span>, <span class="hljs-number">0x6F</span>, <span class="hljs-number">0x21</span>, <span class="hljs-number">0x54</span>, <span class="hljs-number">0x45</span>, <span class="hljs-number">0x6C</span>, <span class="hljs-number">0x3E</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x16</span>, <span class="hljs-number">0x5A</span>, <span class="hljs-number">0x3D</span>, <span class="hljs-number">0x30</span>, <span class="hljs-number">0x0D</span>, <span class="hljs-number">0x11</span>, <span class="hljs-number">0x61</span>, <span class="hljs-number">0x30</span>, <span class="hljs-number">0x4A</span>, <span class="hljs-number">0x70</span>, <span class="hljs-number">0x1F</span>, <span class="hljs-number">0x52</span>, <span class="hljs-number">0x39</span>, <span class="hljs-number">0x2</span>, <span class="hljs-number">0x4</span>, <span class="hljs-number">0x2E</span>, <span class="hljs-number">0x10</span>]<br>crflag=[]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">32</span>):<br>    a=key[i%<span class="hljs-built_in">len</span>(key)]<br>    crflag.append(enflag[i]^<span class="hljs-built_in">ord</span>(a))<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">chr</span>(crflag[i]),end=<span class="hljs-string">&quot;&quot;</span>)<br><br></code></pre></td></tr></table></figure>
+<p>结果是3A!T_rh0_Ts3_a_siSoycPS!C{sDFE}S<br>最后只剩下XB[]观察一下XB先是由xb[i]&#x3D;i,然后通过随机数打乱了顺序,这也是我卡住的地方,我以为是通过动态调用直接得到xb打乱后的结果,结果我动不了一点,然后我想到了伪随机,python的随机数和c的不太一样so就没搞出来<br>下来我自己痛定思痛,决定用c再搞搞,于是再一个阳光明媚的中午,翘了一节课的代价,搞了出来,并写下了这篇wp</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdlib.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    srand(<span class="hljs-number">1</span>);<br>    <span class="hljs-type">int</span> xb[<span class="hljs-number">33</span>];<br>    <span class="hljs-type">char</span> crflag[] = <span class="hljs-string">&quot;3A!T_rh0_Ts3_a_siSoycPS!C&#123;sDFE&#125;S&quot;</span>;<br>    srand(<span class="hljs-string">&#x27;\x01&#x27;</span>);<br><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">33</span>;i++)xb[i] = i;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">33</span>; i++) &#123;<br>        <span class="hljs-type">int</span> j = rand();<br>        <span class="hljs-type">int</span> k = (j % <span class="hljs-number">32</span>);<br>        <span class="hljs-type">int</span> temp = xb[i];<br>        xb[i] = xb[k];<br>        xb[k] = temp;<br>        temp = <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">32</span>) &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">33</span>; j++) &#123;<br>            <span class="hljs-keyword">if</span> (xb[j] == i)<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>, crflag[j]);<br>        &#125;<br>        i++;<br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p>首先计算机中不存在绝对的随机,再c语言中随机数由随机种子srand决定,当srand被固定时,之后的随机数也就固定了,也就说xb[]可以得到了,再通过相关逻辑的逆推理<br>最后flag&#x3D;DASCTF{Th3_Proc3ss_iS_S0_Eas!!}</p>
 
                 
               </div>
@@ -310,18 +312,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/16/ezprocess/" title="ezprocess">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ezprocess</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/13/%E6%97%A0%E7%BA%BF%E4%BC%A0%E8%BE%93/" title="无线传输">
-                        <span class="hidden-mobile">无线传输</span>
+                      <a href="/2023/11/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%84%9A%E6%9C%AC/" title="js script">
+                        <span class="hidden-mobile">js script</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
